@@ -1,14 +1,11 @@
-// TODO username validate
-// no longer than 20 characters, done in HTML
-// alphabetic, numeric, some symbols {_, -}
-
-// TODO password validate
-// 8~20 characters, done in HTML
-// alphabetic, numeric, some symbols {_, -, #, $, %, &, @, ^, `, ~, <, >, *, +, !, ?, =}
-
 let form = document.getElementById("signUpForm");
 
 form.addEventListener("submit", (e) => {
+  // add interacted class to all form elements
+  Array.from(form.elements).forEach((i) => {
+    i.classList.add("interacted");
+  });
+
   if (form.checkValidity()) {
     // form is valid - make further checks
   } else {
@@ -25,4 +22,11 @@ form.addEventListener("submit", (e) => {
       }
     });
   }
+});
+
+// add interacted class on focusout
+Array.from(form.elements).forEach((i) => {
+  i.addEventListener("focusout", () => {
+    i.classList.add("interacted");
+  });
 });

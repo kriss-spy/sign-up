@@ -105,6 +105,17 @@ body {
   height: 300px;
 }
 
+input:focus {
+  outline: 3px solid #006eff;
+  outline-offset: -1px;
+}
+
+input:invalid.interacted {
+  outline: 3px solid red;
+  outline-offset: -1px;
+}
+
+
 fieldset {
   background-color: rgb(250, 244, 237);
   border-radius: 10px;
@@ -116,24 +127,21 @@ fieldset {
 }
 
 .prompt {
+  opacity: 0;
   font-size: x-small;
 }
 
+.invalid .prompt {
+  opacity: 1;
+  color: red;
+}
+
 button {
-  width: 100px;
+  width: 150px;
   border-radius: 5px;
   background-color: aliceblue;
 }
 
 button:hover {
   background-color: antiquewhite;
-}
-
-.prompt {
-  opacity: 0;
-}
-
-.invalid .prompt {
-  opacity: 1;
-  color: red;
 }
