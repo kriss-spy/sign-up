@@ -1,0 +1,139 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* my css below */
+
+/* .mozilla-text-<uniquifier> {
+  font-family: "Mozilla Text", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+} */
+
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+
+* {
+  font-family: "Mozilla Text", system-ui;
+}
+
+body {
+  background: linear-gradient(rgba(256, 256, 256, 0.7), rgba(256, 256, 256, 0.7)), url("./assets/unsplash.webp");
+  background-repeat: no-repeat;
+  background-position: center;
+
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+  justify-content: space-around;
+}
+
+
+#signUpForm {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  width: 400px;
+  height: 300px;
+}
+
+fieldset {
+  background-color: rgb(250, 244, 237);
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
+}
+
+.prompt {
+  font-size: x-small;
+}
+
+button {
+  width: 100px;
+  border-radius: 5px;
+  background-color: aliceblue;
+}
+
+button:hover {
+  background-color: antiquewhite;
+}
+
+.prompt {
+  opacity: 0;
+}
+
+.invalid .prompt {
+  opacity: 1;
+  color: red;
+}

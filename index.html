@@ -6,7 +6,45 @@
     <title>Document</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Mozilla+Text:wght@200..700&display=swap");
+  </style>
   <body>
+    <h1 id="titleBar">SIGN UP RN!</h1>
+    <!-- TODO sign up form HTML -->
+    <form id="signUpForm" method="GET" novalidate>
+      <fieldset id="usernameArea" name="username">
+        <legend>username</legend>
+        <div class="prompt">must be no more than 20 characters</div>
+        <input
+          type="text"
+          id="usernameInput"
+          name="username"
+          maxlength="20"
+          title="input username"
+        />
+      </fieldset>
+      <fieldset id="passwordArea" name="password">
+        <legend>password</legend>
+        <div class="prompt">
+          must be between 8 and 20 characters and contain letter, number and at
+          least one special symbol
+        </div>
+
+        <input
+          type="text"
+          id="passwordInput"
+          name="password"
+          minlength="8"
+          maxlength="20"
+          pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[^A-Za-z0-9]).+$"
+          required
+        />
+      </fieldset>
+
+      <button type="submit" id="submitBtn">submit</button>
+    </form>
+
     <script src="main.js"></script>
   </body>
 </html>
